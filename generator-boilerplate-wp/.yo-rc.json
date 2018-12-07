@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Allan Cruz",
+      "authorEmail": "contato@allancruz.com.br",
+      "authorUrl": ""
+    }
+  }
+}
