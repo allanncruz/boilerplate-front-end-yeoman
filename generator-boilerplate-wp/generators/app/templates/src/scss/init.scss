@@ -1,0 +1,22 @@
+// import Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/fancybox/dist/scss/jquery.fancybox";
+
+$color-dark: #222;
+$primary-color: #e7be37;
+$secondary-color: #0f2240;
+$color-white: #fff;
+
+$theme-colors:(
+  "color-dark": $color-dark,
+  "primary-color": $primary-color,
+  "secondary-color": $secondary-color,
+  "color-white": $color-white
+);
+
+
+@import "library/_general";
+@import "library/_nav";
+@import "library/_components";
+@import "library/_singles";
+@import "library/_fonts";

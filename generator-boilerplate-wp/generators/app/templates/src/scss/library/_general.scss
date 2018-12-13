@@ -1,0 +1,315 @@
+body {
+  font-family: Roboto-Light;
+}
+
+a {
+  color: $primary-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+p{
+  color: $color-dark;
+}
+
+.color-icons{
+  i{
+    font-weight: 600;
+  }
+  .fa-facebook-square{
+    color: #5494e4;
+  }
+  .fa-facebook{
+    color: #5494e4;
+  }
+  .fa-twitter{
+    color: #42cbfe;
+  }
+  .fa-instagram{
+    color: #e270ff;
+  }
+  .fa-whatsapp{
+    color: #bbff6a;
+  }
+  .fa-phone{
+    color: #24aabe;
+  }
+  .fa-youtube{
+    color: #e04749;
+  }
+}
+
+.flex-item{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.sticky-top{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+//Propriedades Bootstrap
+.btn, .wpcf7-submit{
+
+}
+.btn-sm{
+  border: 0;
+}
+.btn-default, .wpcf7-submit {
+  background: $primary-color !important;
+  color: $white;
+  &:hover, &:active, &:focus {
+  }
+}
+.bg-default{
+  background-size: cover!important;
+  background-position: center!important;
+}
+
+.photo-highlight{
+  border: solid 5px $white;
+  max-width: 500px;
+}
+
+//Properties Wordpress
+
+.gallery{
+  clear: both;
+  .gallery-item{
+    width: 15.4% !important;
+    margin: 0.5% 0.63%;
+    float: inherit !important;
+    display: inline-table;
+    img{
+      width: 100%;
+      box-shadow: 0 0 7px rgba(0,0,0,.4);
+      border-radius: .3rem;
+    }
+    .gallery-caption{
+      margin-left: 0;
+      font-size: .8rem;
+      margin-top: .5rem;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .gallery-item{
+      width: 48%!important;
+      img{
+        height: auto !important;
+      }
+    }
+  }
+}
+
+.alignright, .alignleft{
+  border: solid 5px #fff;
+  max-width: 530px;
+  height: 350px;
+  width: 100%;
+  padding: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 0;
+  object-fit: cover;
+
+}
+
+.alignright{
+  float: right;
+  margin: 1rem 0 1rem 2rem;
+}
+.alignleft{
+  float: left;
+  margin: 1rem 2rem  1rem 0;
+}
+
+//Contact Form 7 / Form bootstrap
+
+.wpcf7-form{
+  label{
+    width: 100%;
+  }
+}
+
+.form-control, .wpcf7-form-control{
+  height: 50px;
+  background: $white;
+  margin: .4rem 0;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  border: none;
+  width: 100%;
+  &:focus{
+    box-shadow: none;
+    border: 1px solid $color-dark;
+    outline: 0;
+  }
+
+  &.g-recaptcha{
+    background: no-repeat !important;
+    border: none !important;
+    padding: 0;
+    margin: 0;
+    height: 83px;
+    justify-content: center;
+    display: flex;
+  }
+}
+textarea.form-control, textarea.wpcf7-form-control{
+  height: 110px;
+}
+textarea.wpcf7-form-control{
+  position: relative;
+  padding: .5rem 0 0 1rem;
+}
+.wpcf7-submit{
+  border: 0;
+  width: 265px;
+  margin: 0 auto;
+  display: inherit;
+}
+
+div.wpcf7{
+  input[type=file]{
+    font-size: 1rem;
+    padding: .7rem;
+  }
+}
+
+//Messages Contact form 7
+div.wpcf7-mail-sent-ok{
+  background: #84e7e7 !important;
+  border: none !important;
+  padding: 1rem !important;
+  border-radius: 1rem !important;
+  text-align: center !important;
+}
+div.wpcf7-validation-errors{
+  border: none !important;
+  padding: 1rem !important;
+  border-radius: 1rem;
+  text-align: center;
+  background: #faf5b4;
+}
+
+//Owl Carousel
+ .carousel-inner{
+   overflow: initial;
+ }
+.owl-stage-outer{
+  z-index: 99;
+}
+.owl-carousel {
+  .owl-nav{
+    width: 100%;
+    top: 0 !important;
+    position: absolute;
+    bottom: inherit;
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+    height: 100%;
+    button{
+      position: absolute;
+      outline: none;
+      i{
+        color: #c8c8c3;
+        font-size: 1.8rem;
+      }
+      &:hover, &:active, &:visited{
+        i{
+          color: #50504f;
+        }
+      }
+    }
+    .owl-prev{
+      left: -1rem;
+    }
+    .owl-next{
+      right: -1rem;
+    }
+  }
+  .owl-dots{
+    display: none;
+  }
+}
+//Owl anima
+.owl-anima{
+  .owl-nav{
+    top: 13rem !important;
+    width: 100%;
+    position: absolute;
+    button{
+      position: absolute;
+      i{
+        color: $white;
+        font-size: 2rem;
+      }
+    }
+    .owl-prev{
+      left: 7%;
+    }
+    .owl-next{
+      right: 7%;
+    }
+  }
+  .owl-dots{
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    .owl-nav{
+      top: 7rem!important;
+    }
+  }
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
+
+/*** basic styles ***/
+
+
+input[type=radio].with-font,
+input[type=checkbox].with-font {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+input[type=radio].with-font ~ label:before,
+input[type=checkbox].with-font ~ label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f1db";
+  letter-spacing: 10px;
+  color: #535353;
+  width: 1.4em;
+}
+
+input[type=radio].with-font:checked ~ label:before,
+input[type=checkbox].with-font:checked ~ label:before  {
+  content: "\f00c";
+  color: darkgreen;
+  letter-spacing: 5px;
+}
+input[type=checkbox].with-font ~ label:before {
+  content: "\f096";
+}
+input[type=checkbox].with-font:checked ~ label:before {
+  content: "\f046";
+  color: darkgreen;
+}
+input[type=radio].with-font:focus ~ label:before,
+input[type=checkbox].with-font:focus ~ label:before,
+input[type=radio].with-font:focus ~ label,
+input[type=checkbox].with-font:focus ~ label
+{
+  color: green;
+}

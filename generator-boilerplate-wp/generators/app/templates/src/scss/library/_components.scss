@@ -1,0 +1,81 @@
+
+.header{
+  z-index: 999;
+}
+
+//Slide
+
+.area-banner{
+  .post_thumbnail{
+    height: 640px;
+    object-fit: cover;
+    @include media-breakpoint-down(sm) {
+      height: 490px;
+    }
+  }
+  .legenda {
+    bottom: 6rem;
+    left: 0;
+    p{
+      color: $white;
+    }
+  }
+
+  .owl-nav {
+    button{
+      top: 6rem;
+      i{
+        font-size: 3rem !important;
+      }
+    }
+    .owl-prev, .owl-next{
+      background: none !important;
+    }
+  }
+}
+
+
+//Services
+
+.services{
+  figure{
+    height: 200px;
+  }
+}
+
+
+
+//Footer
+
+.footer {
+  h6 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .area-banner{
+    .banner{
+      .item{
+        height: 400px;
+        .legenda{
+          left: 0;
+          padding: 0 .2rem;
+          bottom: 1rem !important;
+          p{
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    .assinatura{
+      display: inherit;
+    }
+  }
+}
