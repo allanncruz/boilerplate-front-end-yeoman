@@ -10,14 +10,15 @@ module.exports = class extends Generator {
       yosay(`Welcome to the smashing ${chalk.red('generator-boilerplate-wp')} generator!`)
     );
 
-    const prompts = [
-      {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
-        default: true
-      }
-    ];
+    var prompts = [{
+      type   : 'input',
+      name   : 'project_name',
+      message: 'What is you project name ? '
+    }, {
+      type   : 'input',
+      name   : 'author',
+      message: 'What is author name?'
+    }];
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
