@@ -16,8 +16,13 @@ module.exports = class extends Generator {
       message: 'What is you project name ? '
     }, {
       type   : 'input',
+      name   : 'description',
+      message: 'What is Description?'
+    },{
+      type   : 'input',
       name   : 'author',
       message: 'What is author name?'
+      
     }];
 
     return this.prompt(prompts).then(props => {
@@ -32,6 +37,7 @@ module.exports = class extends Generator {
       this.templatePath('_package.json'),
       this.destinationPath('package.json'), {
         project_name: this.props.project_name,
+        description: this.props.description,
         author      : this.props.author
       }
     );
