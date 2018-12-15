@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-front-end-wp",
+  "name": "<%= project_name %>",
   "version": "1.0.0",
   "description": "É uma estrutura pronta com automatização pré-configurada, utilizando recursos de processamentos já definidos.",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://allandantas@bitbucket.org/allandantas/boilerplate-front-end-wp.git"
   },
-  "author": "",
+  "author": "<%= author %>",
   "license": "ISC",
   "homepage": "https://bitbucket.org/allandantas/boilerplate-front-end-wp#readme",
   "devDependencies": {

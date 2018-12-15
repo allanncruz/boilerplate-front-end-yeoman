@@ -27,10 +27,88 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+    //package.json
+    this.fs.copyTpl(
+      this.templatePath('_package.json'),
+      this.destinationPath('package.json'), {
+        project_name: this.props.project_name,
+        author      : this.props.author
+      }
     );
+
+
+    //Page 404
+    this.fs.copyTpl(
+      this.templatePath('_404.php'),
+      this.destinationPath('404.php')
+    );
+
+    //Nav Walker
+    this.fs.copyTpl(
+      this.templatePath('_class-wp-bootstrap-navwalker.php'),
+      this.destinationPath('class-wp-bootstrap-navwalker.php')
+    );
+
+    //Footer
+    this.fs.copyTpl(
+      this.templatePath('_footer.php'),
+      this.destinationPath('footer.php')
+    );
+
+    //Functions
+    this.fs.copyTpl(
+      this.templatePath('_functions.php'),
+      this.destinationPath('functions.php')
+    );
+
+    //Gulpfile
+    this.fs.copyTpl(
+      this.templatePath('_gulpfile.js'),
+      this.destinationPath('gulpfile.js')
+    );
+
+    //Header
+    this.fs.copyTpl(
+      this.templatePath('_header.php'),
+      this.destinationPath('header.php')
+    );
+
+    //Index
+    this.fs.copyTpl(
+      this.templatePath('_index.php'),
+      this.destinationPath('index.php')
+    );
+
+    //Contact
+    this.fs.copyTpl(
+      this.templatePath('_page-contact-and-cocation.php'),
+      this.destinationPath('page-contact-and-cocation.php')
+    );
+
+    //Screenshot
+    this.fs.copyTpl(
+      this.templatePath('_screenshot.png'),
+      this.destinationPath('screenshot.png')
+    );
+
+    //Single
+    this.fs.copyTpl(
+      this.templatePath('_single.php'),
+      this.destinationPath('single.php')
+    );
+
+    //Style wp
+    this.fs.copyTpl(
+      this.templatePath('_style.css'),
+      this.destinationPath('style.css')
+    );
+
+    //src
+    this.fs.copyTpl(
+      this.templatePath('src'),
+      this.destinationPath('src')
+    );
+
   }
 
   install() {
