@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://allandantas@bitbucket.org/allandantas/boilerplate-front-end-wp.git"
+    "url": "git+https://github.com/allanncruz/boilerplate-front-end-wp.git"
   },
   "author": "<%= author %>",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/allandantas/boilerplate-front-end-wp#readme",
+  "homepage": "",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
