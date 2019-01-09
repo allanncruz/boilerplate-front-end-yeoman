@@ -85,6 +85,12 @@ module.exports = class extends Generator {
       this.destinationPath('index.php')
     );
 
+    //Page
+    this.fs.copyTpl(
+        this.templatePath('_page.php'),
+        this.destinationPath('page.php')
+    );
+
     //Contact
     this.fs.copyTpl(
       this.templatePath('_page-contact-and-cocation.php'),
@@ -107,6 +113,12 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('_style.css'),
       this.destinationPath('style.css')
+    );
+
+    //gitignore
+    this.fs.copyTpl(
+      this.templatePath('_.gitignore'),
+      this.destinationPath('.gitignore')
     );
 
     //src
