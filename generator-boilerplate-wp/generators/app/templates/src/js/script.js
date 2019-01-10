@@ -11,3 +11,9 @@
 
     $(".gallery-icon a").attr("rel", "galeria");
     $(".gallery-icon a").fancybox();
+
+    
+    //Fancybox from gallery Wordpress version 5
+
+    $(".blocks-gallery-item figure a").attr("rel", "galeria");
+    $(".blocks-gallery-item figure  a").fancybox();
