@@ -127,6 +127,13 @@ module.exports = class extends Generator {
       this.destinationPath('src')
     );
 
+    //Add Plugin advanced-custom-fields
+    this.fs.copyTpl(
+      this.templatePath('_advanced-custom-fields'),
+      this.destinationPath('../../plugins/advanced-custom-fields')
+    );
+
+
   }
 
   install() {
