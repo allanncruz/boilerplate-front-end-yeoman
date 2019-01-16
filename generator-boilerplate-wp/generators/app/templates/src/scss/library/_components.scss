@@ -5,15 +5,15 @@
 
 //Slide
 
-.area-banner{
-  .post_thumbnail{
+.carousel{
+  .carousel-thumbnail{
     height: 640px;
     object-fit: cover;
     @include media-breakpoint-down(sm) {
       height: 490px;
     }
   }
-  .legenda {
+  .carousel-legend {
     bottom: 6rem;
     left: 0;
     p{
@@ -34,14 +34,6 @@
   }
 }
 
-
-//Services
-
-.services{
-  figure{
-    height: 200px;
-  }
-}
 
 
 
