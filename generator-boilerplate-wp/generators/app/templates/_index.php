@@ -6,6 +6,7 @@ get_header();
     <section class="carousel">
         <div class="carousel-inner owl-carousel banner owl-anima">
 
+            <!-- Starting the custom carousel loop post-->
             <?php
             $anima = new WP_Query(array(
                 'post_type' => 'animacao'
@@ -15,6 +16,7 @@ get_header();
                     $anima->the_post();
                     ?>
 
+                    <!-- Html structure for posting custom post-->
                     <a href="<?php
                     the_field('link');
                     ?>">
@@ -42,6 +44,7 @@ get_header();
                 endwhile;
             endif;
             ?>
+            <!-- Finish carousel loop-->
 
         </div>
     </section>
@@ -51,6 +54,7 @@ get_header();
             <div class="content-box bg-white p-5 shadow-sm">
                 <div class="row">
 
+                    <!-- Starting function to return content from a specific page-->
                     <?php
                     $about = new WP_Query(array(
                         'post_type' => 'page',
@@ -62,6 +66,7 @@ get_header();
                             $about->the_post();
                             ?>
 
+                            <!-- Html structure for posting custom post-->
                             <div class="col-md-7">
                                 <h1 class="display-4"><?php
                                     the_title();
@@ -87,6 +92,7 @@ get_header();
                         endwhile;
                     endif;
                     ?>
+                    <!-- End function to return content-->
 
                 </div>
             </div>
