@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
     <section class="internal-page">
         <div class="container featurette mt-5">
@@ -15,4 +17,6 @@
         </div>
     </section>
 
-<?php get_footer(); ?>
+<?php
+get_footer();
+?>

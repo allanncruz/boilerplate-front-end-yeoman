@@ -1,65 +1,99 @@
 <?php
 //Template Name: Home
-    get_header(); ?>
+get_header();
+?>
 
-    <?php
-    $anima = new WP_Query(array(
-        'post_type' => 'animacao'
-    ));
+    <section class="carousel">
+        <div class="carousel-inner owl-carousel banner owl-anima">
 
-    if($anima->have_posts()):
-        ?>
-        <section class="carousel">
-            <div class="carousel-inner owl-carousel banner owl-anima">
-                <?php while($anima->have_posts()): $anima->the_post(); ?>
+            <?php
+            $anima = new WP_Query(array(
+                'post_type' => 'animacao'
+            ));
+            if ($anima->have_posts()):
+                while ($anima->have_posts()):
+                    $anima->the_post();
+                    ?>
 
-                    <a href="<?php the_field('link') ?>">
-                        <img class="carousel-thumbnail" alt="<?php the_title(); ?>" src="<?php the_post_thumbnail_url(); ?>">
+                    <a href="<?php
+                    the_field('link');
+                    ?>">
+                        <img class="carousel-thumbnail"
+                             alt="<?php
+                             the_title();
+                             ?>"
+                             src="<?php
+                             the_post_thumbnail_url();
+                             ?>">
+
                         <div class="container position-relative">
                             <div class="carousel-legend text-center w-100 position-absolute">
-                                <h3 class="text-uppercase"><?php the_title(); ?></h3>
-                                <?php the_content(); ?>
+                                <h3 class="text-uppercase"><?php
+                                    the_title();
+                                    ?></h3>
+                                <?php
+                                the_content();
+                                ?>
                             </div>
                         </div>
                     </a>
 
-                <?php endwhile; ?>
-            </div>
-        </section>
-    <?php endif; ?>
+                    <?php
+                endwhile;
+            endif;
+            ?>
+
+        </div>
+    </section>
 
     <section class="company py-5">
         <div class="container">
             <div class="content-box bg-white p-5 shadow-sm">
                 <div class="row">
+
                     <?php
                     $about = new WP_Query(array(
                         'post_type' => 'page',
                         'pagename' => 'about'
                     ));
 
-                    if($about->have_posts()):
-                        ?>
+                    if ($about->have_posts()):
+                        while ($about->have_posts()):
+                            $about->the_post();
+                            ?>
 
-                        <?php while($about->have_posts()): $about->the_post(); ?>
-                        <div class="col-md-7">
+                            <div class="col-md-7">
+                                <h1 class="display-4"><?php
+                                    the_title();
+                                    ?></h1>
+                                <?php
+                                the_field('chamada_da_home');
+                                ?>
+                                <a href="<?php
+                                bloginfo("url");
+                                ?>/about" class="btn btn-default">Read More</a>
+                            </div>
+                            <div class="col-md-5 order-first order-md-2">
+                                <img class="company-thumbnail w-100"
+                                     alt="<?php
+                                     the_title();
+                                     ?>"
+                                     src="<?php
+                                     the_post_thumbnail_url();
+                                     ?>">
+                            </div>
 
-                            <h1 class="display-4"><?php the_title(); ?></h1>
-                            <?php the_field('chamada_da_home'); ?>
-                            <a href="<?php bloginfo("url") ?>/about" class="btn btn-default">Read More</a>
+                            <?php
+                        endwhile;
+                    endif;
+                    ?>
 
-                        </div>
-                        <div class="col-md-5 order-first order-md-2">
-                            <img class="company-thumbnail w-100" src="<?php the_post_thumbnail_url(); ?>">
-                        </div>
-
-                    <?php endwhile; ?>
-
-                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </section>
 
 
-<?php get_footer(); ?>
+<?php
+get_footer();
+?>

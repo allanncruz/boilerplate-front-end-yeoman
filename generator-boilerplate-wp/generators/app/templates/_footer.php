@@ -2,8 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-3">
-                <a class="navbar-brand position-relative" href="<?php bloginfo("url") ?>">
-                    <img src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
+                <a class="navbar-brand position-relative" href="<?php
+                bloginfo("url");
+                ?>">
+                    <img src="<?php
+                    bloginfo("template_url");
+                    ?>/dist/img/image/logo.png">
                 </a>
             </div>
 
@@ -16,7 +20,9 @@
         </div>
     </div>
 </footer>
-<?php wp_footer(); ?>
+<?php
+wp_footer();
+?>
 
 </body>
 </html>
