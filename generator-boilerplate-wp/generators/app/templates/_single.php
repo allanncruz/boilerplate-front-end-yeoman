@@ -12,13 +12,14 @@ get_header();
                         while (have_posts()):
                             the_post();
                             ?>
-                            <h1 class="title title-default"><?php
-                                the_title();
-                                ?></h1>
                             <img onerror="this.style.display='none'" src="<?php
                             the_post_thumbnail_url();
                             ?>"
-                                 class="img-thumbnail photo-highlight w-100 p-0 shadow mt-2 mb-3 ml-4 rounded-0 float-right">
+                                 class="single-thumbnail w-100 p-0 float-right shadow mt-2 mb-3 ml-4 ">
+
+                            <h1 class="title"><?php
+                                the_title();
+                                ?></h1>
                             <?php
                             the_content();
                             ?>

@@ -102,12 +102,10 @@ p{
 }
 
 .alignright, .alignleft, .single-thumbnail{
-  border: solid 5px #fff;
-  max-width: 530px;
-  height: 350px;
+  max-width: 460px;
+  height: 310px;
   width: 100%;
   padding: 0;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   border-radius: 0;
   object-fit: cover;
 
@@ -117,7 +115,7 @@ p{
   float: right;
   margin: 1rem 0 1rem 2rem;
 }
-.alignleft, .single-thumbnail{
+.alignleft{
   float: left;
   margin: 1rem 2rem  1rem 0;
 }
