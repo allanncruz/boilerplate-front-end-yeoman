@@ -9,6 +9,8 @@ gulp.task('sass', function() {
     return gulp.src([
         'node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
         'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
+        'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css',
+        'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css',
         'src/scss/*.scss'])
     .pipe(concat('style.min.css'))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -22,6 +24,8 @@ gulp.task('js', function() {
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/owl.carousel/dist/owl.carousel.js',
         'node_modules/fancybox/dist/js/jquery.fancybox.js',
+        'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+        'node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pt-BR.min.js',
             'src/js/*.js'])
         .pipe(concat('all.js'))
         .pipe(uglify())

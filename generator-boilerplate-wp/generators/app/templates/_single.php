@@ -14,6 +14,7 @@ get_header();
                             ?>
                             <img onerror="this.style.display='none'" src="<?php
                             the_post_thumbnail_url();
+                            
                             ?>"
                                  class="single-thumbnail w-100 p-0 float-right shadow mt-2 mb-3 ml-4 ">
 
