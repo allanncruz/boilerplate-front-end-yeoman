@@ -101,6 +101,20 @@ p{
   }
 }
 
+//wp-block-gallery wordpress v5
+.wp-block-gallery{
+  .blocks-gallery-item{
+    &:before{
+      display: none;
+    }
+
+    img{
+      border: solid 1px #939b9f;
+      border-radius: .3rem;
+    }
+  }
+}
+
 .alignright, .alignleft, .single-thumbnail{
   max-width: 460px;
   height: 310px;
