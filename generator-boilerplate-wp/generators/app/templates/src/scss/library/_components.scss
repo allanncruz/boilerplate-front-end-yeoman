@@ -21,15 +21,15 @@
   @include media-breakpoint-down(sm) {
     .carousel-thumbnail{
       height: 490px;
-      .carousel-legend{
-        left: 0;
-        padding: 0 .2rem;
-        bottom: 1rem !important;
-        p{
-          text-align: center;
-          font-size: 1.1rem;
-          line-height: 1.2rem;
-        }
+    }
+    .carousel-legend{
+      left: 0;
+      padding: 0 .5rem;
+      bottom: 0rem !important;
+      p{
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.2rem;
       }
     }
   }
