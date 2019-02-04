@@ -121,6 +121,12 @@ module.exports = class extends Generator {
       this.destinationPath('.gitignore')
     );
 
+    //README
+    this.fs.copyTpl(
+      this.templatePath('_README.md'),
+      this.destinationPath('README.md')
+    );
+
     //src
     this.fs.copyTpl(
       this.templatePath('src'),
