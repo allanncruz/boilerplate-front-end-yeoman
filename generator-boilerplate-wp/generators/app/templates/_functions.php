@@ -16,7 +16,7 @@
     }
 
     function my_acf_google_map_api( $api ){
-        $api['key'] = 'AIzaSyDNj--p0jczavWMrCOqsw_GBNF29EH8MsQ';
+        $api['key'] = '';
         return $api;
     }
     add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
