@@ -92,6 +92,7 @@
             'has_archive'        => true,
             'hierarchical'       => true,
             'menu_position'      => null,
+            'taxonomies' => array('category'),
             'rest_base'          => 'animacoes',
             'rest_controller_class' => 'WP_REST_Posts_Controller',
             'supports'           => array( 'title', 'editor','thumbnail')
