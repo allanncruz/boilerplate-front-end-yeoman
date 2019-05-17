@@ -1,10 +1,14 @@
-# generator-boilerplate-wp [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# Generator Boilerplate-wp 
 > WordPress theme boilerplate generator
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-boilerplate-wp using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+#### Global Dependencies
 
+* NodeJS - (https://nodejs.org/en/)
+* gulp - npm install gulp-cli -g
+* Sass install - npm install -g sass
+* Yeoman - npm install -g yo
 ```bash
 npm install -g yo
 npm install -g generator-boilerplate-wp
