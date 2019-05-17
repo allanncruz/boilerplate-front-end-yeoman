@@ -1,5 +1,9 @@
 # Generator Boilerplate-wp 
-> WordPress theme boilerplate generator
+It is a ready structure with preconfigured automation, using already defined processing resources.
+
+The interface has a Wordpress theme structured with Bootstrap 4, in order to standardize the institutional production modes.
+
+>You need to download wordpress at https://www.wordpress.org/download/. Then follow the instructions in the "wordpress / wp-content / themes"
 
 ## Installation
 
@@ -11,8 +15,6 @@
 Then generate your new project:
 
 ```bash
-mkdir new-project
-cd new-project
 yo boilerplate-wp
 ```
 
