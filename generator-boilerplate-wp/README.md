@@ -11,6 +11,8 @@
 Then generate your new project:
 
 ```bash
+mkdir new-project
+cd new-project
 yo boilerplate-wp
 ```
 
