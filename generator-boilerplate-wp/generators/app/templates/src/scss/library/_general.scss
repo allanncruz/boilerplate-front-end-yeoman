@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto-Light;
+  font-family: Roboto-Light, sans-serif;
 }
 
 a {
@@ -9,70 +9,11 @@ a {
   }
 }
 p{
-  color: $color-dark;
+  color: $dark;
 }
 
-.color-icons{
-  i{
-    font-weight: 600;
-  }
-  .fa-facebook-square{
-    color: #5494e4;
-  }
-  .fa-facebook{
-    color: #5494e4;
-  }
-  .fa-twitter{
-    color: #42cbfe;
-  }
-  .fa-instagram{
-    color: #e270ff;
-  }
-  .fa-whatsapp{
-    color: #bbff6a;
-  }
-  .fa-phone{
-    color: #24aabe;
-  }
-  .fa-youtube{
-    color: #e04749;
-  }
-}
-
-.flex-item{
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-}
-
-.sticky-top{
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-}
-
-//Propriedades Bootstrap
-.btn, .wpcf7-submit{
-
-}
-.btn-sm{
-  border: 0;
-}
-.btn-default, .wpcf7-submit {
-  background: $primary-color !important;
-  color: $white;
-  &:hover, &:active, &:focus {
-  }
-}
-.bg-default{
-  background-size: cover!important;
-  background-position: center!important;
-}
-
-
-//Properties Wordpress
-
+//Wordpress Elemtns
+//
 .gallery{
   clear: both;
   .gallery-item{
@@ -101,25 +42,13 @@ p{
   }
 }
 
-//wp-block-gallery wordpress v5
-.wp-block-gallery{
-  .blocks-gallery-item{
-    &:before{
-      display: none;
-    }
-
-    img{
-      border: solid 1px #939b9f;
-      border-radius: .3rem;
-    }
-  }
-}
-
 .alignright, .alignleft, .single-thumbnail{
-  max-width: 460px;
-  height: 310px;
+  border: solid 5px #fff;
+  max-width: 530px;
+  height: 350px;
   width: 100%;
   padding: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   border-radius: 0;
   object-fit: cover;
 
@@ -136,11 +65,6 @@ p{
 
 //Contact Form 7 / Form bootstrap
 
-.wpcf7-form{
-  label{
-    width: 100%;
-  }
-}
 
 .form-control, .wpcf7-form-control{
   height: 50px;
@@ -152,7 +76,7 @@ p{
   width: 100%;
   &:focus{
     box-shadow: none;
-    border: 1px solid $color-dark;
+    border: 1px solid $dark;
     outline: 0;
   }
 
@@ -192,13 +116,13 @@ div.wpcf7-mail-sent-ok{
   background: #84e7e7 !important;
   border: none !important;
   padding: 1rem !important;
-  border-radius: 1rem !important;
+  border-radius: .5rem !important;
   text-align: center !important;
 }
 div.wpcf7-validation-errors{
   border: none !important;
   padding: 1rem !important;
-  border-radius: 1rem;
+  border-radius: .5rem;
   text-align: center;
   background: #faf5b4;
 }

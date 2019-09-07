@@ -1,0 +1,76 @@
+//Customize btns
+.btn-primary{
+  text-transform: uppercase;
+  @include button-variant(
+                  $primary-color,
+                  darken($primary-color, 7.5%),
+                  darken($primary-color, 10%),
+                  lighten($primary-color,5%),
+                  lighten($primary-color, 10%),
+                  darken($primary-color,30%));
+}
+
+
+.btn-secondary {
+  text-transform: uppercase;
+  color: $primary-color !important;
+  @include button-variant(
+                  $secondary-color,
+                  darken($secondary-color, 7.5%),
+                  darken($secondary-color, 10%),
+                  lighten($secondary-color,5%),
+                  lighten($secondary-color, 10%),
+                  darken($secondary-color,30%));
+}
+
+
+.btn-outline-secondary{
+  color: $secondary-color;
+  border-color: $secondary-color;
+}
+.btn-outline-light{
+  color: $white;
+  border-color: $white;
+}
+.btn-outline-primary{
+  border-color: $primary-color;
+  color: $primary-color;
+  &:hover{
+    background: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.btn-success{
+  text-transform: uppercase;
+  border: none;
+  background: linear-gradient(135deg, #1bdc68 60%,#7df969 100%);
+
+  &:hover{
+    filter: grayscale(.3);
+  }
+}
+
+
+//Propriedades do CMS
+.btn, .wpcf7-submit{
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 5px;
+  font-size: 16px;
+  width: 270px;
+  max-width: auto;
+  height: 60px;
+  font-family: barlowbold, sans-serif;
+  transition: .3s;
+  @include flex-center
+}
+.btn-sm{
+  border: 1px solid;
+  height: 40px;
+  display: inline-flex;
+  padding: 0 .4rem;
+  text-transform: uppercase;
+  font-size: 12px;
+  align-items: center;
+}

@@ -1,68 +1,26 @@
-// import Bootstrap
+// import styles
+//
+
+// Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
+
+
+// fancybox
 @import "node_modules/fancybox/dist/scss/jquery.fancybox";
 
-$color-dark: #222;
-$primary-color: #e7be37;
-$secondary-color: #0f2240;
-$color-white: #fff;
+// Variables
+@import "library/variables";
 
-$theme-colors:(
-  "color-dark": $color-dark,
-  "primary-color": $primary-color,
-  "secondary-color": $secondary-color,
-  "color-white": $color-white
-);
 
-/ SASS mixins personalizados
-@mixin flex-column() {
-  display: flex;
-  flex-direction: column;
-}
-@mixin flex-start-end() {
-  @include flex-column;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-@mixin flex-end-end() {
-  @include flex-column;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-@mixin flex-center-end() {
-  @include flex-column;
-  align-items: center;
-  justify-content: flex-end;
-}
-@mixin flex-center-between() {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-@mixin flex-center() {
-  @include flex-column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-@mixin flex-center-bottom() {
-  @include flex-column;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: flex-end;
-}
+// Mixins
+@import "library/mixins";
 
-@mixin before-default() {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-@import "library/_general";
-@import "library/_nav";
-@import "library/_components";
-@import "library/_singles";
-@import "library/_fonts";
+// Components
+@import "library/nav";
+@import "library/components";
+@import "library/singles";
+@import "library/buttons";
+@import "library/general";
+@import "library/fonts";
+@import "library/sections";
+@import "library/cards";

@@ -1,0 +1,15 @@
+//Customizar cores
+$primary-color: #1CCAF4;
+$secondary-color: #1BDC68;
+$color-green: #1BDC68;
+$color-title: #585A5B !default;
+
+//ootstrap colors
+$theme-colors:(
+        "primary-color": $primary-color,
+        "secondary-color": $secondary-color,
+);
+
+
+//Customizar spacing
+$spacing-section: 100px 0;

@@ -1,24 +1,6 @@
 
-//Up Navbar
-.upnavbar {
-  background: $gray-400;
-  font-size: 1.3rem;
-  .navbar-brand {
-    img{
-      width: 140px;
-      z-index: 10;
-    }
-  }
-  .upnav-items {
-    li {
-      .fas {
-        font-size: 1.5rem;
-      }
-    }
-  }
-}
-
-//Nav Bar
+//NavBar Elements
+//
 .navbar {
   .navbar-nav{
     .active>{
@@ -30,37 +12,35 @@
   .nav-item{
     .nav-link{
       color: $white;
+      text-transform: uppercase;
+      font-size: 13px;
       &:hover, &:focus, &:active{
         color: $primary-color;
       }
     }
     .dropdown-menu{
-      border-radius: 0;
+      right: 0;
+      left: inherit;
       padding: 0;
-      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-      top: 2.9rem;
-      width: 265px;
-      left: -4rem;
+      border-radius: 0;
       li{
-        a{
-          padding: .7rem 2rem;
-          font-size: .9rem;
-          font-family: montserratsemibold;
-          color: #212529 !important;
-          border-bottom: solid 1px #ebebeb;
-
-          &:hover, &:active{
-            background: $primary-color;
-            color: $white !important;
-          }
-        }
-        &:last-child{
-          a{
-            border:0;
-          }
+        width: 218px;
+      }
+      a{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: .7rem;
+        &:hover{
+          background: $primary-color;
         }
       }
     }
+  }
+
+  .navbar-toggler{
+    cursor: pointer;
+    background: $primary-color;
   }
 
   .navbar-collapse{
@@ -73,6 +53,11 @@
     .navbar-nav .nav-link{
       justify-content: center;
       padding: 1rem 0;
+    }
+    .navbar-brand{
+      .navbar-brand--img{
+        width: 100px;
+      }
     }
     .dropdown-menu{
       width: 100%;

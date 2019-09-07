@@ -1,0 +1,51 @@
+
+// SASS mixins personalizados
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-start-end() {
+  @include flex-column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+@mixin flex-end-end() {
+  @include flex-column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+@mixin flex-end() {
+  @include flex-column;
+  justify-content: flex-end;
+}
+@mixin flex-center-end() {
+  @include flex-column;
+  align-items: center;
+  justify-content: flex-end;
+}
+@mixin flex-center-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-center() {
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@mixin flex-center-bottom() {
+  @include flex-column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+@mixin before-default() {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
