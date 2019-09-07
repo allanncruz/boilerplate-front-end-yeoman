@@ -91,12 +91,6 @@ module.exports = class extends Generator {
         this.destinationPath('page.php')
     );
 
-    //Contact
-    this.fs.copyTpl(
-      this.templatePath('_page-contact-and-cocation.php'),
-      this.destinationPath('page-contact-and-cocation.php')
-    );
-
     //Screenshot
     this.fs.copyTpl(
       this.templatePath('_screenshot.png'),
