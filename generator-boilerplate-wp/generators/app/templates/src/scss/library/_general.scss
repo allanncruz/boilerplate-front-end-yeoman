@@ -168,32 +168,3 @@ div.wpcf7-validation-errors{
     display: none;
   }
 }
-//Owl anima
-.owl-anima{
-  .owl-nav{
-    top: 13rem !important;
-    width: 100%;
-    position: absolute;
-    button{
-      position: absolute;
-      i{
-        color: $white;
-        font-size: 2rem;
-      }
-    }
-    .owl-prev{
-      left: 7%;
-    }
-    .owl-next{
-      right: 7%;
-    }
-  }
-  .owl-dots{
-    display: none;
-  }
-  @include media-breakpoint-down(md) {
-    .owl-nav{
-      top: 7rem!important;
-    }
-  }
-}

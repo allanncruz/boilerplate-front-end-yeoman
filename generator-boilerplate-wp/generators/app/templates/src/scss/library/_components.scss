@@ -34,14 +34,22 @@
   }
 
   .owl-nav {
-    button{
-      top: 6rem;
-      i{
-        font-size: 3rem !important;
+    .owl-anima{
+      .owl-nav {
+        button{
+          top: 20rem;
+          z-index: 99;
+          i{
+            font-size: 3rem !important;
+          }
+        }
+        .owl-prev{
+          left: 7%;
+        }
+        .owl-next{
+          right: 7%;
+        }
       }
-    }
-    .owl-prev, .owl-next{
-      background: none !important;
     }
   }
 }
