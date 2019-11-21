@@ -6,51 +6,51 @@
 //Slide
 
 .carousel{
-  .carousel-thumbnail{
-    height: 750px;
-    max-height: 100vh;
-    object-fit: cover;
-    @include media-breakpoint-down(sm) {
-      height: 100vh;
-    }
-  }
-  .carousel-legend {
-    width: 460px;
-    max-width: 100%;
-    bottom: 0;
-    height: 650px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .title {
-      line-height: 120%;
-      text-transform: uppercase;
-      color: $white;
-      font-family: latoregular, sans-serif;
-    }
-    p {
-      color: $white;
-    }
-  }
-
-  .owl-nav {
-    .owl-anima{
-      .owl-nav {
-        button{
-          top: 20rem;
-          z-index: 99;
-          i{
-            font-size: 3rem !important;
-          }
-        }
-        .owl-prev{
-          left: 7%;
-        }
-        .owl-next{
-          right: 7%;
+  .owl-anima{
+    .owl-nav {
+      button{
+        top: 20rem;
+        z-index: 99;
+        i{
+          font-size: 3rem !important;
         }
       }
+      .owl-prev{
+        left: 7%;
+      }
+      .owl-next{
+        right: 7%;
+      }
     }
+  }
+}
+
+.carousel--thumbnail{
+  height: 750px;
+  max-height: 100vh;
+  object-fit: cover;
+  @include media-breakpoint-down(sm) {
+    height: 100vh;
+  }
+}
+.carousel--legend {
+  position: absolute;
+  width: 460px;
+  max-width: 100%;
+  bottom: 0;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .carousel--legend__title {
+    line-height: 120%;
+    text-transform: uppercase;
+    color: $white;
+    font-family: latoregular, sans-serif;
+  }
+  p {
+    color: $white;
   }
 }
 
@@ -58,11 +58,8 @@
 //Footer
 
 .footer {
-  h6 {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 900;
-  }
+  background: $dark;
+  color: $white;
 }
 @include media-breakpoint-down(sm) {
   .area-banner{

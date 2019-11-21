@@ -1,33 +1,24 @@
-//box Cont
-.wrap{
 
-  .content-box{
-    position: relative;
-    z-index: 2;
-  }
-  .content-area{
-    ul{
-      list-style: none;
-      li{
-        position: relative;
-        font-size: 1.1rem;
-        margin: 0.4rem 0;
-        &:before{
-          content: '';
-          position: absolute;
-          width: 10px;
-          height: 10px;
-          left: -16px;
-          top: 7px;
-          border-radius: 8px;
-          background: $secondary-color;
-        }
+    
+
+//Site Content
+.site-content{
+  ul{
+    list-style: none;
+    li{
+      position: relative;
+      font-size: 1.1rem;
+      margin: 0.4rem 0;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: -16px;
+        top: 7px;
+        border-radius: 8px;
+        background: $secondary-color;
       }
     }
-  }
-  #map{
-    height: 341px;
-    border-top: solid 3px #ccc;
-    margin-top: -5rem;
   }
 }
