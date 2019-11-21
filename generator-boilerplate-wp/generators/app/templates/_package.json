@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-front-end-wp",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "É uma estrutura pronta com automatização pré-configurada, utilizando recursos de processamentos já definidos.",
   "main": "index.js",
   "scripts": {
