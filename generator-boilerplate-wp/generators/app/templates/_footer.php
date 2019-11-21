@@ -1,8 +1,8 @@
-<footer class="footer bg-dark py-5 m-0 text-white">
+<footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-3">
-                <a class="navbar-brand position-relative" href="<?php bloginfo("url") ?>">
+                <a class="footer--brand" href="<?php bloginfo("url") ?>">
                     Boilerplate wp
                 </a>
             </div>

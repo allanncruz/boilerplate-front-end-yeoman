@@ -22,4 +22,29 @@ npm install
 gulp
 ```
 
+# Resolvendo problemas de permissão do Wordpress no localhost/
+
+Edite o arquivo wp-config.php: vim wp-config.php
+
+Insira a constante:
+```
+define('FS_METHOD', 'direct');
+```
+
+## Execute na pasta raíz do seu Wordpress:
+```
+chown -R www-data:www-data
+
+# permissões em arquivos
+find . -type f -exec chmod 644 {} \;
+
+# permissoes em diretórios
+find . -type d -exec chmod 755 {} \;
+``` 
+A primeira linha dará permissão de dono para usuário e grupo www-data. A segunda linha vai dar permissão 755 para todas as pastas, e a terceira dará permissão 644 para todos os arquivos.
+
+Jamais, em hipótese alguma dê permissão 777
+
+
+
 *Developed by Allan Cruz - (https://github.com/allanncruz)*

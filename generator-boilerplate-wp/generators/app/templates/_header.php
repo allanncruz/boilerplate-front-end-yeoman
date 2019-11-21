@@ -14,13 +14,14 @@
             <a class="navbar-brand text-white" href="<?php bloginfo("url") ?>">
                 Boilerplate wp
             </a>
-            <button class="navbar-toggler border-0 rounded-0 p-1"
+            <button class="navbar-toggler border-0 collapsed rounded-0 p-1"
                     type="button"
                     data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1"
                     aria-controls="bs-example-navbar-collapse-1"
                     aria-expanded="false"
                     aria-label="Toggle navigation">
+                <span class="my-1 w-100 close">X</span>
                 <span class="navbar-toggler-icon"></span>
             </button>
             <?php
