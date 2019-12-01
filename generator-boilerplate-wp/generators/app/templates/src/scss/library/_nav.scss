@@ -47,18 +47,31 @@
   }
 
   .collapse.navbar-collapse{
-    justify-content: flex-end;
+    padding: 41px 0;
   }
 
   .navbar-toggler{
     cursor: pointer;
     background: $primary-color;
-    outline: none;
+    outline: none !important;
+    right: 5%;
+    position: absolute;
+    top: 15px;
+    padding: 0 !important;
     width: 38px;
-    .navbar-toggler-icon{
-      width: 1.2em;
+    span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      color: $color-text;
+      opacity: 1;
     }
   }
+  .navbar-collapse{
+    justify-content: flex-end;
+  }
+  
   @include media-breakpoint-down(lg) {
     .navbar-collapse{
       margin: 0 -1rem -.6rem -1rem;

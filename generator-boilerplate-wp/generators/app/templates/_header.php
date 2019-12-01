@@ -21,8 +21,8 @@
                     aria-controls="bs-example-navbar-collapse-1"
                     aria-expanded="false"
                     aria-label="Toggle navigation">
-                <span class="my-1 w-100 close">X</span>
-                <span class="navbar-toggler-icon"></span>
+                <span class="my-1 w-100 close"><i class="fas fa-times"></i></span>
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
             </button>
             <?php
             wp_nav_menu( array(
