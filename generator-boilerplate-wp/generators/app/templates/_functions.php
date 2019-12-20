@@ -5,6 +5,25 @@
         return false;
     }
 
+    if (!function_exists('theme_setup')) {
+        function theme_setup()
+        {
+
+            // Adds theme support to logo
+            add_theme_support(
+                'custom-logo',
+                array(
+                    'height'      => 80,
+                    'width'       => 220,
+                    'flex-width'  => true,
+                    'flex-height' => true,
+                )
+            );
+        }
+    }
+
+    add_action('after_setup_theme', 'theme_setup');
+
 
     add_theme_support( 'post-thumbnails' );
     add_action('wp_enqueue_scripts', 'theme_scripts', 'favicon');

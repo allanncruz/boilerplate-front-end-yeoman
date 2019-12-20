@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container">
             <a class="navbar-brand text-white" href="<?php bloginfo("url") ?>">
-                Boilerplate wp
+                <?php the_custom_logo() ?>
             </a>
             <button class="navbar-toggler border-0 collapsed rounded-0 p-1"
                     type="button"
