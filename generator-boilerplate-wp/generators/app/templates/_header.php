@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8"/>
-    <title><?php wp_title(); ?></title>
+    <meta <?php bloginfo('charset'); ?> >
+    <title>><?php bloginfo('title') ?></title>
     <?php wp_head(); ?>
 </head>
 <body>
