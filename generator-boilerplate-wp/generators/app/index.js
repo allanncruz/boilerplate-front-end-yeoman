@@ -128,6 +128,14 @@ module.exports = class extends Generator {
     );
 
 
+
+    //functions
+    this.fs.copyTpl(
+      this.templatePath('functions'),
+      this.destinationPath('functions')
+    );
+
+
   }
 
   install() {
