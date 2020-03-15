@@ -88,6 +88,6 @@
                 </div>
                 <a href=<?php bloginfo("url") ?>/?page_id=12" class="btn btn-outline-primary m-auto">Mais notícias</a>
             </div>
-        </section>>
+        </section>
     </main>
 <?php get_footer(); ?>
