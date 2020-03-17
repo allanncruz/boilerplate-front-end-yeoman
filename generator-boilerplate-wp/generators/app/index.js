@@ -103,6 +103,18 @@ module.exports = class extends Generator {
       this.destinationPath('single.php')
     );
 
+    //Page blog
+    this.fs.copyTpl(
+      this.templatePath('_page-blog.php'),
+      this.destinationPath('page-blog.php')
+    );
+
+    //Taxonomy blog
+    this.fs.copyTpl(
+      this.templatePath('_taxonomy-blog_taxonomy.php'),
+      this.destinationPath('taxonomy-blog_taxonomy.php')
+    );
+
     //Style wp
     this.fs.copyTpl(
       this.templatePath('_style.css'),
