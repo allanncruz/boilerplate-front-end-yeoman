@@ -85,12 +85,18 @@ module.exports = class extends Generator {
       this.destinationPath('index.php')
     );
 
-    //Page exemplos posts
+    //Page exemplos categoria
     this.fs.copyTpl(
-        this.templatePath('_page-exemplos-posts.php'),
-        this.destinationPath('page-exemplos-posts.php')
+        this.templatePath('_page-exemplos-categoria.php'),
+        this.destinationPath('page-exemplos-categoria.php')
     );
 
+    //Page exemplos posts
+    this.fs.copyTpl(
+      this.templatePath('_page-exemplos-posts.php'),
+      this.destinationPath('page-exemplos-posts.php')
+  );
+  
     //Page
     this.fs.copyTpl(
         this.templatePath('_page.php'),
