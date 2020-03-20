@@ -18,23 +18,30 @@
             </div>
 
             <div class="col-md-4 pl-5 pr-0 phone">
-                <div class="d-flex">
-                    <i class="fas fa-phone"></i>
-                    <?php echo get_theme_mod('phone_number') ?>
-                </div>
                 
-                <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('whatsapp_number') ?>&text="
-                    class="d-flex d-md-none"
-                    target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                   <?php echo get_theme_mod('whatsapp_number') ?>
-                </a>
-                <a href="https://web.whatsapp.com/send?phone=<?php echo get_theme_mod('whatsapp_number') ?>&text="
-                    class="d-none d-md-flex"
-                    target="_blank">
-                    <i class="fab fa-whatsapp"></i>
+                <?php if(get_theme_mod('phone_number')) { ?>
+                    <div class="d-flex">
+                        <i class="fas fa-phone"></i>
+                        <?php echo get_theme_mod('phone_number') ?>
+                    </div>
+                <?php } ?>
+
+                <?php if(get_theme_mod('whatsapp_number')) { ?>
+                    
+                    <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('whatsapp_number') ?>&text="
+                        class="d-flex d-md-none"
+                        target="_blank">
+                        <i class="fab fa-whatsapp"></i>
                     <?php echo get_theme_mod('whatsapp_number') ?>
-                </a>
+                    </a>
+                    <a href="https://web.whatsapp.com/send?phone=<?php echo get_theme_mod('whatsapp_number') ?>&text="
+                        class="d-none d-md-flex"
+                        target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <?php echo get_theme_mod('whatsapp_number') ?>
+                    </a>
+
+                <?php } ?>
             </div>
 
             <div class="col-md-4 pl-0 address">
