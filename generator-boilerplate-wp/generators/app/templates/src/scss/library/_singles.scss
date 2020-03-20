@@ -72,3 +72,171 @@
     height: 300px;
   }
 }
+
+
+.category-carte{
+
+  &__category{
+    color: $primary-color;
+    font-family: barlowextrabold;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__post{
+    .post_thumbnail{
+      width: 175px;
+      height: 110px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
+    h6,
+    .price{
+      font-family: latoregular;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 17px;
+    }
+  }
+}
+
+.hr-carte{
+  margin: 50px 0 100px 0;
+}
+
+//Tab blog
+.tab-blog {
+  .nav-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+
+    li {
+      &:before {
+        display: none;
+      }
+
+      a {
+        color: #343434;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: Gotham-Light;
+        padding: 0 15px;
+        height: 50px;
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 22px;
+        background: #EDEDED;
+
+        &.active {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  .card-tag a {
+    position: absolute;
+    height: 20px;
+    background: $primary-color;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    top: 15px;
+    font-family: Gotham-Bold;
+    text-transform: uppercase;
+    padding: 0 8px;
+  }
+
+.blog .card-body{
+    flex: auto;
+}
+
+
+.blog-img{
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+    .blog .card{
+        flex-direction: column;
+        border-radius: 10px;
+        height: 320px;
+    }
+
+    .blog-img-box{
+        filter: grayscale(1);
+        opacity: .1;
+    }
+}
+
+
+// Accordion post type
+
+.post-accordion {
+  .card {
+    cursor: pointer;
+    border: 0;
+  }
+
+  .card-header {
+    padding: 0;
+    border: 0;
+
+    a {
+      display: inherit;
+      padding: 1rem 30px;
+      text-transform: uppercase;
+      height: 50px;
+      color: $primary-color;
+      display: flex;
+      justify-content: space-between;
+
+      i {
+        color: $primary-color;
+        transition: .3s;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .card-body {
+    padding: 45px;
+    border: solid 1px $primary-color;
+
+    ul li {
+      list-style: none;
+      line-height: 22px;
+      border-bottom: solid 1px #E8E8E8;
+      padding: 15px 0 15px 45px;
+      font-size: 14px;
+    }
+  }
+
+  .card-header a[aria-expanded="true"] {
+    background-color: $primary-color;
+    border: solid 1px $primary-color;
+    color: #fff;
+
+    i {
+      color: #fff;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .post-accordion .card-body {
+    padding: 15px;
+
+    ul li {
+      padding: 13px;
+    }
+  }
+}
