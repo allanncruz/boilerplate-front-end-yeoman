@@ -59,34 +59,33 @@
 
         <section class="cards">
             <div class="container">
-                <h1 class="text-center">Cards Examples</h1>
+                <h1 class="text-center">Blog</h1>
                 <div class="carousel-inner owl-carousel owl-cards">
                     <?php
-                    if ( have_posts() ) {
-                        while ( have_posts() ) { the_post(); ?>
+                    $blog = new WP_Query(array( 'post_type' => 'blog' ));
+                    if ($blog->have_posts()):
+                        while ($blog->have_posts()): $blog->the_post(); ?>
+                        <div>
                             <a href="<?php the_permalink(); ?>">
                                 <div class="cards-item mx-1">
-                                    <div class="mb-4">
-                                        <img class="cards-item__image"
-                                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16cec93e9a3%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16cec93e9a3%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22106.390625%22%20y%3D%2296.3%22%3E100%x190%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" />
-                                        <!--                                        <img class="cards-image"-->
-                                        <!--                                             src="--><?php //the_post_thumbnail_url(); ?><!--" />-->
+                                    <div class="">
+                                        <img class="cards-item__image" onerror="this.style.display='none'" src="<?php the_post_thumbnail_url(); ?>" />
                                     </div>
-                                    <div class="cards-item_legend">
-                                        <div class="data">
-                                            <i class="far fa-calendar-alt"></i>
+                                    <div class="cards-item__legend px-4 py-3">
+                                        <div class="cards-item__data text-white">
                                             <?php the_time( get_option( 'date_format' ) ); ?>
                                         </div>
-                                        <h5 class="cards-legend__title"><?php the_title(); ?></h5>
-                                        <p class="m-0"><?php the_field('subtitulo'); ?></p>
+                                        <span class="card-category mt-3">
+                                            <?php echo get_the_term_list( get_the_ID(), 'blog_taxonomy', '#', ', ' ); ?>
+                                        </span>
+                                        <h5 class="cards-item__title"><?php the_title(); ?></h5>
                                     </div>
                                 </div>
                             </a>
-                        <?php }
-                    }
-                    ?>
+                        </div>
+                    <?php endwhile; endif; ?>
                 </div>
-                <a href=<?php bloginfo("url") ?>/?page_id=12" class="btn btn-outline-primary m-auto">Mais notícias</a>
+                <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary m-auto">Mais notícias</a>
             </div>
         </section>
     </main>
