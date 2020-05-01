@@ -22,7 +22,7 @@ module.exports = class extends Generator {
       type   : 'input',
       name   : 'author',
       message: 'What is author name?'
-      
+
     }];
 
     return this.prompt(prompts).then(props => {
@@ -96,7 +96,7 @@ module.exports = class extends Generator {
       this.templatePath('_page-exemplos-posts.php'),
       this.destinationPath('page-exemplos-posts.php')
   );
-  
+
     //Page
     this.fs.copyTpl(
         this.templatePath('_page.php'),
@@ -151,12 +151,16 @@ module.exports = class extends Generator {
       this.destinationPath('src')
     );
 
-
-
     //functions
     this.fs.copyTpl(
       this.templatePath('functions'),
       this.destinationPath('functions')
+    );
+
+    //partials
+    this.fs.copyTpl(
+      this.templatePath('partials'),
+      this.destinationPath('partials')
     );
 
 
