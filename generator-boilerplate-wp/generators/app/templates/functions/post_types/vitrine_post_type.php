@@ -3,18 +3,18 @@
 function animacaoType()
 {
     $labels = array(
-        'name'               => 'Animações',
-        'singular_name'      => 'Animação',
-        'menu_name'          => 'Animações',
-        'name_admin_bar'     => 'Animações',
+        'name'               => 'Vitrine',
+        'singular_name'      => 'Vitrine',
+        'menu_name'          => 'Vitrine',
+        'name_admin_bar'     => 'Vitrine',
         'add_new'            => 'Adicionar Novo',
         'add_new_item'       => 'Adicionar novo item',
         'new_item'           => 'Novo Item',
         'edit_item'          => 'Editar Item',
         'view_item'          => 'Ver Item',
         'all_items'          => 'Todos os Itens',
-        'search_items'       => 'Procurar Animações',
-        'parent_item_colon'  => 'Parent Animações',
+        'search_items'       => 'Procurar Vitrine',
+        'parent_item_colon'  => 'Parent Vitrine',
         'not_found'          => 'Nenhum item encontrado',
         'not_found_in_trash' => 'Nenhum item encontrado na lixeira'
     );
@@ -35,7 +35,6 @@ function animacaoType()
         'hierarchical'       => true,
         'menu_position'      => null,
         'rest_base'          => 'animacoes',
-        'taxonomies' => array('category'),
         'rest_controller_class' => 'WP_REST_Posts_Controller',
         'supports'           => array( 'title', 'editor','thumbnail')
     );
