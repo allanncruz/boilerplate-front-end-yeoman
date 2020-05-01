@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-front-end-wp",
-  "version": "1.1.1",
-  "description": "É uma estrutura pronta com automatização pré-configurada, utilizando recursos de processamentos já definidos.",
+  "name": "starter-theme-wp",
+  "version": "1.0.0",
+  "description": "It is a Wordpress theme with pre-configured automation, using defined processing resources.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

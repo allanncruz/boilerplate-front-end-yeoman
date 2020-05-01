@@ -1,50 +1,104 @@
-# Boilerplate Front-End Wp #
+# Starter Theme for WordPress
+It is a Wordpress theme with pre-configured automation, using defined processing resources.
 
-It is a ready structure with preconfigured automation, using already defined processing resources.
+The interface has a structured with Bootstrap 4, in order to standardize the institutional production modes.
 
-The interface has a Wordpress theme structured with Bootstrap 4, aiming to standardize the institutional production modes.
-
-You need to download wordpress from https://br.wordpress.org/download/. Then clone this project in the "wordpress/wp-content/themes"
-
-### Global Dependencies
+##### Global Dependencies
 
 * NodeJS - (https://nodejs.org/en/)
 * gulp - (https://gulpjs.com/)
 * Sass install - (https://sass-lang.com/guide)
 
+## Install Project
+Open terminal and navigate to your localhost / directory
 
-### Install Dependencies
+
 ```
+# Download CMS
+curl -O https://wordpress.org/latest.zip
+
+# Unzip CMS
+unzip latest.zip
+
+# Remove zipped file
+rm latest.zip
+
+# Rename unzipped folder
+mv wordpress/ name-of-your-project
+
+# Navigate to the themes folder
+cd name-of-your-project/wp-content/themes/
+
+# Clone starter-theme-wp
+git clone https://github.com/allanncruz/starter-theme-wp.git
+
+# Access starter-theme-wp folder
+cd starter-theme-wp
+
+# Install dependencies
 npm install
-```
-### Compile and activate watch
-```
+
+# Compile assets
 gulp
 ```
 
-# Resolvendo problemas de permissão do Wordpress no localhost/
+### Required plugins
+*Advanced Custom Fields - (https://www.advancedcustomfields.com/)*
 
-Edite o arquivo wp-config.php: vim wp-config.php
+## Solving Wordpress permission issues on localhost/
+  
+Edit the wp-config.php file:
 
-Insira a constante:
+Enter the constant:
 ```
 define('FS_METHOD', 'direct');
 ```
 
-## Execute na pasta raíz do seu Wordpress:
+##### Run in your Wordpress root folder:
 ```
-chown -R www-data:www-data
+# Permissions on files
+sudo find . -type f -exec chmod 644 {} \;
 
-# permissões em arquivos
-find . -type f -exec chmod 644 {} \;
-
-# permissoes em diretórios
-find . -type d -exec chmod 755 {} \;
+# Permissions on directories
+sudo find . -type d -exec chmod 755 {} \;
 ``` 
-A primeira linha dará permissão de dono para usuário e grupo www-data. A segunda linha vai dar permissão 755 para todas as pastas, e a terceira dará permissão 644 para todos os arquivos.
 
-Jamais, em hipótese alguma dê permissão 777
+## Model contact form 7
+```
+<div class="row">
 
+    <div class="col-md-12">
+        <label>
+            Digite seu nome:
+            [text* nome ]
+        </label>
+    </div>
 
+    <div class="col-md-12">
+        <label>
+            E-mail:
+            [email* email ]
+        </label>
+    </div>
 
+    <div class="col-md-12">
+        <label>
+            Telefone:
+            [text Telefone class:telefone ]
+        </label>
+    </div>
+
+    <div class="col-md-12">
+                  <label>
+		    Deixe sua mensagem
+		    [textarea mensagem]
+                 </label>
+
+[submit "Enviar"] 
+		</div>
+
+</div>
+<label>
+</label>
+```
 *Developed by Allan Cruz - (https://github.com/allanncruz)*
