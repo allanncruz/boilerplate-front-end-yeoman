@@ -1,11 +1,8 @@
-//box Cont
+//Single pages
+//
+
 .wrap{
   padding: 70px 0;
-
-  .content-box{
-    position: relative;
-    z-index: 2;
-  }
   .content-area{
     ul{
       list-style: none;
@@ -28,17 +25,15 @@
   }
 }
 
-//Thum single page
+//Thumb single page
 .single-thumbnail{
   width: 100%;
   height: 380px;
   object-fit: cover;
 }
 
-
-
 .alignright, .alignleft{
-  border: solid 5px #fff;
+  border: solid 5px $white;
   max-width: 430px;
   height: 350px;
   width: 100%;
@@ -63,13 +58,10 @@
   .wrap{
     padding-top: 70px;
   }
-  .single-thumbnail{
-    height: 300px;
-  }
 }
 
 
-.category-carte{
+.categories-carte{
 
   &__category{
     color: $primary-color;
@@ -126,7 +118,7 @@
         background: #EDEDED;
 
         &.active {
-          background: #fff;
+          background: $white;
         }
       }
     }
@@ -138,7 +130,7 @@
     background: $primary-color;
     border-radius: 2px;
     font-size: 12px;
-    color: #fff;
+    color: $white;
     text-align: center;
     line-height: 20px;
     top: 15px;

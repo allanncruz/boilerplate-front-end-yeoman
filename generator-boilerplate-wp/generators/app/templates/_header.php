@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta <?php bloginfo('charset'); ?>>
 
-    <title><?php bloginfo('title') ?></title>
+    <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
 </head>
 <body class="bg-light">
@@ -21,7 +21,7 @@
 
 
                     if(has_custom_logo()) {
-                        echo '<img src="'. esc_url($logo[0]). '" class="img-fluid">';
+                        echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__img">';
                     }else {
                         echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
                     } 
