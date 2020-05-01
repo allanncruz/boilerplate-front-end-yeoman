@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allanncruz/boilerplate-front-end-wp.git"
+    "url": "git+https://github.com/allanncruz/starter-theme-wp.git"
   },
   "author": "",
   "license": "ISC",
@@ -19,10 +19,11 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
-    "bootstrap": "^4.1.3",
+    "bootstrap": "^4.3.1",
     "fancybox": "^3.0.1",
     "gulp-sass": "^4.0.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
+    "jquery.maskedinput": "^1.4.1",
     "natives": "^1.1.6",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.3"

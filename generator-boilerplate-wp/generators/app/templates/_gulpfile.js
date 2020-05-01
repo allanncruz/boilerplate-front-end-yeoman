@@ -8,7 +8,6 @@ gulp.task('default',['sass','js','copyfonts','copy-img','fancy-img','watch']);
 gulp.task('sass', function() {
     return gulp.src([
         'node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
-        'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
         'src/scss/*.scss'])
     .pipe(concat('style.min.css'))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -19,8 +18,9 @@ gulp.task('js', function() {
     return gulp.src([
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'node_modules/owl.carousel/dist/owl.carousel.js',
-        'node_modules/fancybox/dist/js/jquery.fancybox.js',
+            'node_modules/owl.carousel/dist/owl.carousel.min.js',
+        'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
+        'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
             'src/js/*.js'])
         .pipe(concat('all.js'))
         .pipe(uglify())
