@@ -1,6 +1,6 @@
-<?php get_header(); ?>
-
-<?php the_post() ?>
+<?php
+    get_header();
+    the_post() ?>
 
     <section class="wrap">
         <div class="container content-area mt-5">
