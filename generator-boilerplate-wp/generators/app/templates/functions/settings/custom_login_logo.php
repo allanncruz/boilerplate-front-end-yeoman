@@ -5,7 +5,7 @@ function custom_login_logo() {
     echo '<style type="text/css">
            h1 a  
            { 
-                background-image: url(' .get_bloginfo('template_directory').'/assets/images/logo.png) !important;
+                background-image: url(' .get_bloginfo('template_directory').'/dist/img/image/logo.png) !important;
                 width: 193px !important;
                 height: 100px !important;
                 background-size: 133px !important;
@@ -13,7 +13,7 @@ function custom_login_logo() {
             }
            body.login  
            { 
-            background: url(http://atle.mixinternet.com.br/wp-content/themes/atle/assets/images/statistic.jpg);
+            background: url(' .get_bloginfo('template_directory').'/dist/img/image/bg-login.jpg);
             background-size: cover;
             }
             .wp-core-ui .button-primary{
