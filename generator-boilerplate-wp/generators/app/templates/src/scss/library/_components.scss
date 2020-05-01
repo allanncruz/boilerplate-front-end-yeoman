@@ -4,56 +4,109 @@
 }
 
 //Slide
+//
 
 .carousel{
-  .owl-anima{
-    .owl-nav {
-      button{
-        top: 20rem;
-        z-index: 99;
-        i{
-          font-size: 3rem !important;
+  &-thumbnail{
+    height: 700px;
+    object-fit: cover;
+    @include media-breakpoint-down(sm) {
+      height: 100vh;
+    }
+  }
+  &-legend {
+    bottom: 0;
+    height: 700px;
+    p {
+      text-align: center;
+      color: $white;
+      margin: 0;
+      font-size: 20px;
+      line-height: 150%;
+      z-index: 999;
+      position: relative;
+      font-family: OpenSans-Regular;
+    }
+    h2 {
+      font-size: 64px;
+      line-height: 120%;
+      z-index: 999;
+      strong{
+        font-family: MuliBlack;
+        color: $secondary-color;
+      }
+    }
+    > div{
+      z-index: 999;
+      position: relative;
+    }
+  }
+
+  .owl-nav {
+    button{
+      top: 6rem;
+      i{
+        font-size: 3rem !important;
+      }
+    }
+    .owl-prev, .owl-next{
+      background: none !important;
+    }
+  }
+  .owl-dots{
+    position: relative;
+    bottom: 300px;
+    z-index: 99;
+    text-align: center;
+    button{
+      width: 45px;
+      height: 2px;
+      margin: 0 5px;
+      background: $white;
+      outline: none;
+      transition: .3s;
+    }
+    button.active{
+      background: $secondary-color;
+      height: 4px;
+    }
+  }
+
+  &-none{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gray-200;
+    h2{
+      color: $gray-400;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .carousel{
+      &-legend{
+        left: 0;
+        height: 100vh;
+
+        p{line-height: 22px;}
+
+        h2{
+          font-size: 26px;
+          line-height: initial;
+        }
+        .btn{
+          margin: 20px auto !important;
+          height: 48px;
         }
       }
-      .owl-prev{
-        left: 7%;
-      }
-      .owl-next{
-        right: 7%;
-      }
+    }
+
+    .owl-dots{
+      bottom: 45px;
     }
   }
 }
-
-.carousel--thumbnail{
-  height: 750px;
-  max-height: 100vh;
-  object-fit: cover;
-  @include media-breakpoint-down(sm) {
-    height: 100vh;
-  }
-}
-.carousel--legend {
-  position: absolute;
-  width: 460px;
-  max-width: 100%;
-  bottom: 0;
-  height: 650px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .carousel--legend__title {
-    line-height: 120%;
-    text-transform: uppercase;
-    color: $white;
-    font-family: latoregular, sans-serif;
-  }
-  p {
-    color: $white;
-  }
-}
-
 
 //Footer
 
@@ -65,7 +118,7 @@
     font-size: 23px;
     position: relative;
     top: 5px;
-    margin-right: 10px; 
+    margin-right: 10px;
   }
   
   .phone{
