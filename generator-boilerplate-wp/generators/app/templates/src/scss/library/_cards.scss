@@ -1,39 +1,43 @@
 // Cards elements
 //
-.cards-item {
-  background: $white;
-  padding: 20px;
-  margin: 30px 0 50px 0;
-  p {
-    font-size: 18px;
-    line-height: 150%;
-  }
-}
+.cards {
+  &-item{
+    margin: 30px 0 50px 0;
+    p {
+      font-size: 18px;
+      line-height: 150%;
+    }
 
-.cards-item__data{
-  font-size: 12px;
-  line-height: 150%;
-  color: #585A5B;
-  margin-bottom: 13px;
-  i{
-    color: $primary-color;
-  }
-}
+    .card-category{
+      color: $primary-color;
+    }
 
-.cards-item__image{
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-}
+    &__data{
+      font-size: 12px;
+      line-height: 150%;
+      color: #585A5B;
+      margin-bottom: 13px;
+      i{
+        color: $primary-color;
+      }
+    }
 
-.cards-legend__title {
-  font-size: 18px;
-  line-height: 120%;
-  font-family: barlowbold, sans-serif;
-  transition: .3s;
-  color: #838F9C;
-  text-transform: inherit;
-  &:hover {    
-    color: $primary-color;
+    &__image{
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 120%;
+      font-family: barlowbold, sans-serif;
+      transition: .3s;
+      color: #838F9C;
+      text-transform: inherit;
+      &:hover {
+        color: $primary-color;
+      }
+    }
   }
 }

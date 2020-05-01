@@ -26,11 +26,6 @@
       }
     }
   }
-  #map{
-    height: 341px;
-    border-top: solid 3px #ccc;
-    margin-top: -5rem;
-  }
 }
 
 //Thum single page
@@ -183,50 +178,48 @@
   .card {
     cursor: pointer;
     border: 0;
-  }
 
-  .card-header {
-    padding: 0;
-    border: 0;
+    &-header {
+      padding: 0;
+      border: 0;
 
-    a {
-      display: inherit;
-      padding: 1rem 30px;
-      text-transform: uppercase;
-      height: 50px;
-      color: $primary-color;
-      display: flex;
-      justify-content: space-between;
-
-      i {
+      a {
+        padding: 1rem 30px;
+        text-transform: uppercase;
+        height: 50px;
         color: $primary-color;
-        transition: .3s;
-        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        i {
+          color: $primary-color;
+          transition: .3s;
+          font-size: 20px;
+        }
+      }
+
+      a[aria-expanded="true"] {
+        background-color: $primary-color;
+        border: solid 1px $primary-color;
+        color: $white;
+
+        i {
+          color: $white;
+          transform: rotate(180deg);
+        }
       }
     }
-  }
+    &-body {
+      padding: 45px;
+      border: solid 1px $primary-color;
 
-  .card-body {
-    padding: 45px;
-    border: solid 1px $primary-color;
-
-    ul li {
-      list-style: none;
-      line-height: 22px;
-      border-bottom: solid 1px #E8E8E8;
-      padding: 15px 0 15px 45px;
-      font-size: 14px;
-    }
-  }
-
-  .card-header a[aria-expanded="true"] {
-    background-color: $primary-color;
-    border: solid 1px $primary-color;
-    color: #fff;
-
-    i {
-      color: #fff;
-      transform: rotate(180deg);
+      ul li {
+        list-style: none;
+        line-height: 22px;
+        border-bottom: solid 1px #E8E8E8;
+        padding: 15px 0 15px 45px;
+        font-size: 14px;
+      }
     }
   }
 }

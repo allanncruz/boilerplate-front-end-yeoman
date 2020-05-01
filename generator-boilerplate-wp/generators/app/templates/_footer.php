@@ -1,15 +1,15 @@
-<footer class="footer text-white py-5">
+<footer class="footer bg-dark text-white py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-2 p-0">
-                <a class="footer--brand text-center text-md-right" href="<?php bloginfo("url") ?>">
+                <a class="footer-brand text-center text-md-right" href="<?php bloginfo("url") ?>">
                     <?php 
                         $custom_logo_id = get_theme_mod('custom_logo');
                         $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 
 
                         if(has_custom_logo()) {
-                            echo '<img src="'. esc_url($logo[0]). '" class="img-fluid">';
+                            echo '<img src="'. esc_url($logo[0]). '" class="footer-brand__img">';
                         }else {
                             echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
                         } 
@@ -18,7 +18,7 @@
             </div>
 
             <div class="col-md-4 pl-5 pr-0 phone">
-                
+
                 <?php if(get_theme_mod('phone_number')) { ?>
                     <div class="d-flex">
                         <i class="fas fa-phone"></i>

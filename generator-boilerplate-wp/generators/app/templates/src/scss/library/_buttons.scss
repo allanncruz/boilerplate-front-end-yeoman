@@ -1,5 +1,6 @@
 //Customize btns
-.btn-primary{
+.btn-primary,
+.wpcf7-submit{
   text-transform: uppercase;
   @include button-variant(
                   $primary-color,
