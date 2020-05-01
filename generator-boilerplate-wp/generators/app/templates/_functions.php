@@ -47,6 +47,9 @@ add_action('after_setup_theme', 'theme_setup');
 require dirname(__FILE__) .  '/functions/post_types/vitrine_post_type.php';
 require dirname(__FILE__) .  '/functions/post_types/blog_post_type.php';
 
+// ACF
+require dirname(__FILE__) .  '/functions/acf_fields.php';
+
 // Settings
 require dirname(__FILE__) . '/functions/settings/contact_informations_settings.php';
 require dirname(__FILE__) . '/functions/settings/custom_login_logo.php';
