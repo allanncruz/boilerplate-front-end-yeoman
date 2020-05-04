@@ -1,6 +1,6 @@
 {
   "name": "starter-theme-wp",
-  "version": "1.1.3",
+  "version": "1.1.5",
   "description": "It is a Wordpress theme with pre-configured automation, using defined processing resources.",
   "main": "index.js",
   "scripts": {
